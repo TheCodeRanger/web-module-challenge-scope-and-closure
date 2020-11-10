@@ -155,7 +155,7 @@ function scoreboard(getInningScoreCB, inningCB, num) {
   let Away = 0;
   for(let i = 0; i < num; i++){
     Home += getInningScoreCB(inningCB).Home;
-    Away += getInningScoreCB(inningCB).Away;
+    Away += getInningScoreCB(inningCB).Away
     totalGameScore.push(`Inning ${i+1}: Away ${Away} - Home ${Home}`)
   }
   if(Home === Away){
@@ -163,10 +163,11 @@ function scoreboard(getInningScoreCB, inningCB, num) {
   } else{
     totalGameScore.push(`Final Score: Away ${Away} - Home ${Home}`);
   }
-  
+  return totalGameScore;
 }
- scoreboard(getInningScore, inning, 9);
 
+scoreboard(getInningScore, inning, 9);
+console.log(scoreboard(getInningScore, inning, 9));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
