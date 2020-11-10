@@ -80,14 +80,19 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(inningCB, num){
+function finalScore(inningCB, inningNum){
 
-  return {
-    Home: 11,
-    Away: 5
+  let score = {
+    Home: 0,
+    Away: 0
   }
-
+    for (let i = 0; i < inningNum; i++){
+      score.Home += inningCB();
+      score.Away += inningCB();
+    }
+    return score;
 }
+console.log (finalScore(inning,9));
 
 /* Task 4: 
 // create a function called getInningScore 
