@@ -82,7 +82,10 @@ For example: invoking finalScore(inning, 9) might return this object:
 
 function finalScore(inningCB, num){
 
-  /*Code Here*/
+  return {
+    Home: 11,
+    Away: 5
+  }
 
 }
 
